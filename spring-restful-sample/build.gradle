@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'war'
+
+jar {
+    baseName = 'gs-rest-service'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+   providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+   compile         'com.fasterxml.jackson.core:jackson-databind:2.7.5'
+   compile         'org.springframework:spring-webmvc:4.3.1.RELEASE'
+   
+   compile         'io.springfox:springfox-swagger2:2.6.1'  
+   compile         'io.springfox:springfox-swagger-ui:2.4.0'
+   
+   runtime         'io.springfox:springfox-swagger2:2.6.1'
+   runtime         'io.springfox:springfox-swagger-ui:2.4.0'    
+   runtime         'javax.servlet:jstl:1.1.2'
+   
+  // providedCompile files('lib/CnoAcktCmn.jar', 'lib/CnoAcktDomn.jar','lib/castor-1.3.1.jar','lib/castor-1.3.1-anttasks.jar', 'lib/castor-1.3.1-core.jar', 'lib/CnoJ2nUtil.jar', 'lib/common.jar', 'lib/commons-beanutils-1.9.3.jar','lib/commons-lang-2.5.jar','lib/commons-lang3-3.0.jar','lib/fltcrw-1.8.1.jar','lib/J2N.jar','lib/JMSFunctionality.jar','lib/joda-time-2.1.jar','lib/log4j-1.2.15.jar','lib/mybatis-3.1.1.jar') 
+  // runtime files('lib/CnoAcktCmn.jar', 'lib/CnoAcktDomn.jar','lib/castor-1.3.1.jar','lib/castor-1.3.1-anttasks.jar', 'lib/castor-1.3.1-core.jar', 'lib/CnoJ2nUtil.jar', 'lib/common.jar', 'lib/commons-beanutils-1.9.3.jar','lib/commons-lang-2.5.jar','lib/commons-lang3-3.0.jar','lib/fltcrw-1.8.1.jar','lib/J2N.jar','lib/JMSFunctionality.jar','lib/joda-time-2.1.jar','lib/log4j-1.2.15.jar','lib/mybatis-3.1.1.jar')
+   
+}
